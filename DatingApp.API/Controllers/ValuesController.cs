@@ -20,7 +20,7 @@ namespace DatingApp.API.Controllers
             _context = context;
 
         }
-        // GET api/values
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetValues()
         {
@@ -50,7 +50,7 @@ namespace DatingApp.API.Controllers
         {
         }
 
-        // DELETE api/values/5
+        [AllowAnonymous]
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

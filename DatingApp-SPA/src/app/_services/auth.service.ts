@@ -3,22 +3,25 @@ import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
-})
-export class AuthService {
-  baseURL = 'http://localhost:5000/api/auth/';
+  })
+  export class AuthService {
+    baseURL = 'http://localhost:5000/api/auth/';
 
-constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-login(model: any) {
-  return this.http.post(this.baseURL + 'login', model)
-    .pipe(
-      map((response: any) => {
-        const user = response;
-        if (user) {
+  login(model: any) {
+   return this.http.post(this.baseURL + 'login', model)
+     .pipe(
+       map((response: any) => {
+          const user = response;
+          if (user) {
           localStorage.setItem('token', user.token);
         }
       })
     );
-}
+  }
 
+  register(model: any) {
+    return this.http.post(this.baseURL + 'register', model);
+  }
 }
