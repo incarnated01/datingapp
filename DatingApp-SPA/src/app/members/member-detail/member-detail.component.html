@@ -26,8 +26,8 @@
         </div>
         <div class="card-footer">
           <div class="btn-group d-flex">
-            <button class="btn btn-primary w-100">Like</button>
-            <button class="btn btn-success w-100">Message</button>
+            <!-- <button class="btn btn-primary w-100">Like</button>
+            <button class="btn btn-success w-100">Message</button> -->
           </div>
         </div>
       </div>
@@ -38,19 +38,19 @@
           <tab heading="About {{user.knownAs}}">
             <h4>Description:</h4>
             <p>{{user.introduction}}
-            <h4>Looking For:</h4>
-            <p>{{user.lookingFor}}</p>
+            <!-- <h4>Looking For:</h4>
+            <p>{{user.lookingFor}}</p> -->
           </tab>
-          <tab heading="Interests">
+          <!-- <tab heading="Interests">
               <h4>interests</h4>
               <p>{{user.interests}}</p>
-            </tab>
+            </tab> -->
           <tab heading="Photos">
             <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
           </tab>
-          <tab heading="Messages">
+          <!-- <tab heading="Messages">
             <p>Messages here</p>
-          </tab>
+          </tab> -->
         </tabset>
       </div>
 
